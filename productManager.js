@@ -4,7 +4,11 @@ class ProductManager {
     }
 
     setId() {
-        return this.products.length + 1;
+        if (this.products.length === 0) {
+            return 1;
+        }
+        const lastProduct = this.products[this.products.length - 1];
+        return lastProduct.id + 1;
     }
 
     validateProduct(product) {
