@@ -2,10 +2,7 @@ class ProductManager {
     constructor() {
         this.products = [];
     }
-
-    setId() {
-        return this.products.length + 1;
-    }
+    static id = 1;
 
     validateProduct(product) {
 
@@ -29,7 +26,7 @@ class ProductManager {
         if (validationResult !== 'Success') {
             return validationResult;
         }
-        product.id = this.setId();
+        product.id = ProductManager.id++
         this.products.push(product);
         return 'Product added successfully';
     }

@@ -49,7 +49,7 @@ console.log(manager.addProduct({
     thumbnail: 'imagen1.jpg',
     code: '23456'
 }))
-console.log(manager.getProducts());
-console.log(manager.getProductById(8))
-console.log(manager.getProductById())
-console.log(manager.getProductById(2))
+console.table(manager.getProducts());
+console.table(manager.getProductById(8))
+console.table(manager.getProductById())
+console.table(manager.getProductById(2))
